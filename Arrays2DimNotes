@@ -1,0 +1,123 @@
+2 Dimensional Arrays:
+
+    Importance:
+        1. Dynamic Programming is most important topic for cracking MAANG companies -> uses 2 D arrays alot
+
+    Introduction:
+        1. contains rows and columns
+        2. A 2D array, also known as a matrix, is a data structure that organizes elements in rows and columns.
+            It's essentially an array of arrays. In Java, you can declare and use
+            2D arrays to represent various data structures like matrices, tables, or game boards.
+
+    Declaration:
+        data_type[][] array_name = new data_type[rows][columns];
+        int[][] matrix = new int[3][4]; // rows = 3, columns = 4
+
+    Direct Initialization:
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+        int[][] arr = new int[][]; // incorrect
+
+        int[][] arr = new int[5][]; // rows -> 5, columns -> not specified (correct), jagged array
+
+        int[][] arr = new int[][5]; // incorrect, you have to specify the row
+
+
+    Jagged Arrays in Java
+
+        A jagged array, also known as a ragged array, is a multidimensional array where each row can have a
+        different number of columns. It's like a staircase structure, where each step (row) has its
+        own length.
+
+    Declaration:
+
+        data_type[][] array_name = new data_type[rows][];
+
+        Here, rows specifies the number of rows, but the number of columns for each row is not fixed.
+        You can dynamically allocate memory for each row.
+
+        Example:
+
+            int[][] jaggedArray = new int[3][];
+            jaggedArray[0] = new int[]{1, 2, 3};
+            jaggedArray[1] = new int[]{4, 5};
+            jaggedArray[2] = new int[]{6, 7, 8, 9};
+
+    Accessing Elements:
+
+        You can access elements using the same syntax as regular 2D arrays:
+
+        array_name[row_index][column_index];
+
+        For example, to access the element at the second row and first column of the jaggedArray:
+
+        int element = jaggedArray[1][0]; // Accesses the element 4
+
+    Why Use Jagged Arrays?
+
+        Flexibility: You can store data of varying lengths in each row.
+        Memory Efficiency: You can allocate memory precisely for each row, avoiding unnecessary space.
+        Real-world Scenarios: Many real-world data structures, like hierarchical data or triangular matrices,
+                              can be efficiently represented using jagged arrays.
+
+    Key Points to Remember:
+
+        Each row in a jagged array is an independent array with its own size.
+        The number of columns in each row can vary.
+        Jagged arrays offer flexibility in data representation, but they can be slightly more complex to manage
+        compared to regular 2D arrays.
+        By understanding jagged arrays, you can effectively handle diverse data structures and write more
+        efficient and adaptable code.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+ArrayList:
+    1. these are dynamic in size - Can grow or shrink as needed, making them more flexible
+    2. primitive data types are not allowed in ArrayList
+
+
+Key Differences Between Arrays and ArrayLists
+
+    While both arrays and ArrayLists are used to store collections of elements, they have distinct characteristics:
+
+    Arrays
+
+        Fixed size: Once declared, the size of an array cannot be changed.
+        Primitive data types: Can store both primitive data types (like int, double, boolean) and object references.
+        Direct memory access: Elements are stored in contiguous memory locations, allowing for efficient random access using indexes.
+        Less flexible: Limited built-in methods for manipulation.
+
+    ArrayLists
+
+        Dynamic size: Can grow or shrink as needed, making them more flexible.
+        Object references only: Can only store object references.
+        Indirect memory access: Elements are not necessarily stored in contiguous memory locations, but are managed internally.
+        Rich functionality: Provides a variety of methods for adding, removing, searching, and sorting elements.
+        When to Use Which?
+
+    Arrays:
+
+        When you know the exact size of the collection beforehand and performance is critical.
+        For simple data structures where you don't need dynamic resizing.
+
+    ArrayLists:
+
+        When you don't know the exact size of the collection in advance.
+        When you need to frequently add or remove elements.
+        When you want to take advantage of the built-in methods for manipulating lists.
+
+In essence:
+
+    Arrays are like fixed-size containers.
+    ArrayLists are like dynamic, flexible containers with a rich set of features.
+
+
+ NOTE: Primitive data types stores values in memory whereas object or classes stores objects references in memory
+
+
+
+
+

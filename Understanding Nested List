@@ -1,0 +1,55 @@
+Understanding List<List<Integer>>
+
+    In Java, List<List<Integer>> represents a nested list structure. It's essentially a list of lists,
+    where each inner list contains integer elements.
+
+How Elements Are Stored:
+
+    Outer List:
+
+        1. This is the primary container that holds multiple inner lists.
+
+        2. It's like a box that can contain other smaller boxes.
+
+    Inner Lists:
+
+        1. Each inner list is a separate entity within the outer list.
+        2. They hold individual integer elements.
+        3. You can think of them as smaller boxes within the larger box.
+
+Visual Representation:
+
+    Outer List
+      |
+      v
+    [
+      [1, 2, 3], // Inner List 1
+      [4, 5, 6], // Inner List 2
+      [7, 8, 9]  // Inner List 3
+    ]
+
+Accessing Elements:
+
+    To access an element, you'll need to use nested indexing:
+
+    Java
+    List<List<Integer>> input = new ArrayList<>();
+    // ... populate the list ...
+
+    // Access the element at row 1, column 2:
+    int element = input.get(1).get(2);
+
+
+    Explanation:
+
+    input.get(1): This accesses the second inner list (index 1, as indexing starts from 0).
+    .get(2): This accesses the third element (index 2) within that inner list.
+
+    Key Points:
+
+    * Each inner list can have a different number of elements.
+    * The outer list can be empty or contain any number of inner lists.
+    * This structure is often used to represent matrices or 2D arrays in a more flexible way.
+
+ By understanding this hierarchical structure, you can effectively work with nested lists in Java
+ and manipulate their elements as needed.
